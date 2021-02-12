@@ -59,7 +59,7 @@ public class AuthController {
         this.saveJtiToCookie(authToken.getJti(),response);
 
         //返回结果
-        return new Result(true, StatusCode.OK,"登录成功",authToken);
+        return new Result(true, StatusCode.OK,"登录成功",authToken.getJti());
     }
 
     //将令牌的断标识jti存入到cookie中
